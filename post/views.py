@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import PostModel
 
+def main_view(request):
+    return render(request,"start.html")
 
 def list_view_post(request):
     the_list = PostModel.objects.all()
