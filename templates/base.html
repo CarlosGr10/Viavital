@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Viavital | Blog Concept</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+    {% load static %}
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+	<link href="{% static 'assets/css/blog/app.min.css' %}" rel="stylesheet" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+	<!-- begin #page-title -->
+	<div id="page-title" class="page-title has-bg">
+		<div class="bg-cover" data-paroller="true" data-paroller-factor="0.5" data-paroller-factor-xs="0.2" style="background: url({% static 'assets/img/cover/cover-16.jpg' %}) center 0px / cover no-repeat"></div>
+		<div class="container">
+			<h1>Binvenido a Via<span style="color: #f8b100">vital</span></h1>
+			<p>El arte de ser</p>
+		</div>
+	</div>
+	<!-- end #page-title -->
+
+    <!-- Share Content -->
+    {% block base_content %}
+    {% endblock %}
+
+
+    {% include 'footer.html' %}
+
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="{% static 'assets/js/blog/app.min.js' %}"></script>
+	<!-- ================== END BASE JS ================== -->
+</body>
+</html>
