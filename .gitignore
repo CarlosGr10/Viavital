@@ -1,3 +1,6 @@
  .idea/vcs.xml
  venv
  env
+/post/migrations/
+/post/__pycache__/
+/Vital/__pycache__/
