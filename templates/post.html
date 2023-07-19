@@ -28,7 +28,7 @@
 							<div class="post-content">
 								<!-- begin post-image -->
 								<div class="post-image">
-									<a href="">
+									<a href="{% url 'posts:detail' post.pk  %}">
 										<div class="post-image-cover" style="background-image: url({{ post.photo.url }});"></div>
 									</a>
 								</div>
@@ -48,7 +48,7 @@
 								<!-- end post-info -->
 								<!-- begin read-btn-container -->
 								<div class="read-btn-container">
-									<a href="post_detail.html" class="read-btn">Leer Post <i class="fa fa-angle-double-right"></i></a>
+									<a href="{% url 'posts:detail' post.pk  %}" class="read-btn">Leer Post <i class="fa fa-angle-double-right"></i></a>
 								</div>
 								<!-- end read-btn-container -->
 							</div>
@@ -68,7 +68,7 @@
 						<h4 class="section-title"><span>Recientes</span></h4>
 						<ul class="sidebar-list">
                             {% for last in recent_posts %}
-                                <li><a href="#">{{ last.summary }} ({{ last.id}})</a></li>
+                                <li><a href="{% url 'posts:detail' last.pk  %}">{{ last.summary }} ({{ last.id}})</a></li>
                             {% endfor %}
 						</ul>
 					</div>

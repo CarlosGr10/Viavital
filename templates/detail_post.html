@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block base_content %}
+
+    <div class="container container-fluid">
+
+        <div class="row pt-4">
+            <div class="col-12">
+                <div class="jumbotron text-center" style="border-radius: 50px;
+                background: #ffffff;
+                box-shadow:  20px 20px 60px #d9d9d9,
+                             -20px -20px 60px #ffffff;">
+                  <h1 class="display-4" style="color: #f6b000">{{ data.title }}!</h1>
+                  <h4 style="color: #0067ab">{{ data.summary }}</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12" style="border-radius: 50px;
+                background: #ffffff;
+                box-shadow:  20px 20px 60px #d9d9d9,
+                             -20px -20px 60px #ffffff; padding: 25px;">
+               <h5>{{ data.content|linebreaksbr|safe }}</h5>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-12" style="  border-radius: 10px;
+                                        background: #ffffff;
+                                        box-shadow:  20px 20px 60px #d9d9d9,
+                             -20px -20px 60px #ffffff;
+                                        padding: 25px;
+                                        margin: 20px;">
+                Autor: <span style="color: #1c75c7">{{ data.author }}</span>
+            </div>
+        </div>
+
+    </div><br>
+{% endblock %}

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import PostModel
 
 
@@ -17,3 +17,9 @@ def about_view(request):
     recent_post = PostModel.objects.all().order_by('-created')[:10]
     context = {'recent_posts': recent_post}
     return render(request, "about.html", context)
+
+
+def detail_post(request, detail_id):
+    data = get_object_or_404(PostModel, pk=detail_id)
+    context = {"data": data}
+    return render(request, "detail_post.html", context)
