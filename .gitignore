@@ -4,3 +4,7 @@
 /post/migrations/
 /post/__pycache__/
 /Vital/__pycache__/
+db.sqlite3
+.idea/Vital.iml
+.idea/misc.xml
+post/migrations/__pycache__/__init__.cpython-310.pyc
