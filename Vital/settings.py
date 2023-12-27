@@ -65,8 +65,12 @@ WSGI_APPLICATION = 'Vital.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'viavital',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': '10.150.31.40',
+        'PORT': '5432',
     }
 }
 
