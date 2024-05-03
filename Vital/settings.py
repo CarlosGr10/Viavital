@@ -11,9 +11,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ubj^%aayvk2f!mfxvetfd2cy6dgp1=no90_rn6fjzg5j_cqq^n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['64.225.11.164', 'viavital.com.mx']
 
 
 # Application definition
@@ -67,9 +67,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'viavital',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': '10.150.31.40',
+        'USER': 'vital',
+        'PASSWORD': 'viavital',
+        'HOST': '64.225.11.164',
         'PORT': '5432',
     }
 }
@@ -115,6 +115,10 @@ STATICFILES_DIRS = (
     BASE_DIR / 'static',
 )
 
+STATIC_ROOT = (
+    BASE_DIR / 'staticfiles/'
+)
+
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -128,3 +132,4 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

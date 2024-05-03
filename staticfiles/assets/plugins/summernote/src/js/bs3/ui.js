@@ -1,0 +1,1 @@
+/home/carlos/Repositorios/Viavital/static/assets/plugins/summernote/src/js/bs3/ui.js

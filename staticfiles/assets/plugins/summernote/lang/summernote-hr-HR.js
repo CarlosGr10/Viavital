@@ -1,0 +1,1 @@
+/home/carlos/Repositorios/Viavital/static/assets/plugins/summernote/lang/summernote-hr-HR.js

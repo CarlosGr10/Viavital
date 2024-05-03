@@ -1,0 +1,1 @@
+/home/carlos/Repositorios/Viavital/static/assets/plugins/summernote/plugin/specialchars/summernote-ext-specialchars.js

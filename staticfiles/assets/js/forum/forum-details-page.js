@@ -1,0 +1,1 @@
+/home/carlos/Repositorios/Viavital/static/assets/js/forum/forum-details-page.js

@@ -1,0 +1,1 @@
+/home/carlos/Repositorios/Viavital/static/assets/plugins/summernote/config/common/dev.common.config.js
