@@ -1,4 +1,7 @@
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -11,9 +14,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ubj^%aayvk2f!mfxvetfd2cy6dgp1=no90_rn6fjzg5j_cqq^n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv('DEBUG_DJ')
 
-ALLOWED_HOSTS = ['64.225.11.164', 'viavital.com.mx']
+if DEBUG:
+    ALLOWED_HOSTS = ["*"]
+else:
+    ALLOWED_HOSTS = ['64.225.11.164', 'viavital.com.mx']
 
 
 # Application definition
@@ -66,11 +72,11 @@ WSGI_APPLICATION = 'Vital.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'viavital',
-        'USER': 'vital',
-        'PASSWORD': 'viavital',
-        'HOST': '64.225.11.164',
-        'PORT': '5432',
+        'NAME': os.getenv('DATABASE_DB'),
+        'USER': os.getenv('USER_DB'),
+        'PASSWORD': os.getenv('PASSWORD_DB'),
+        'HOST': os.getenv('HOST_DB'),
+        'PORT': os.getenv('PORT_DB'),
     }
 }
 
