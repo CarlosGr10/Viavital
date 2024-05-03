@@ -1,94 +1,105 @@
 {% extends 'base.html' %}
 {% load static %}
-{%  block base_content %}
-	<!-- begin #content -->
-	<div id="content" class="content">
-		<!-- begin container -->
-		<div class="container">
-			<!-- begin row -->
-			<div class="row row-space-30">
-				<!-- begin col-9 -->
-				<div class="col-lg-9">
-					<!-- begin section-container -->
-					<div class="section-container">
-						<div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Toluca%20cento+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" allowfullscreen></iframe>
-						</div>
+{% block base_content %}
+    <!-- begin #content -->
+    <div id="content" class="content">
+        <!-- begin container -->
+        <div class="container">
+            <!-- begin row -->
+            <div class="row row-space-30">
+                <!-- begin col-9 -->
+                <div class="col-lg-9">
+                    <!-- begin section-container -->
+                    <div class="section-container">
+                        <h4 class="section-title m-b-20"><span>Contacto</span></h4>
+                        <p class="m-b-30">
+                            ¿Te sientes atrapado en una espiral de emociones negativas? ¿Deseas encontrar paz interior y
+                            un propósito más profundo en tu vida? En Via Vital, entendemos tus luchas y estamos aquí
+                            para ayudarte a encontrar la sanación espiritual y emocional que tanto anhelas.<br><br>
+                            Sabemos que el camino hacia la felicidad y el bienestar no siempre es fácil, pero con
+                            nuestra ayuda profesional y guiada, podemos acompañarte en tu viaje de transformación
+                            personal. Nuestro equipo altamente capacitado de expertos en psicología y guiados
+                            espirituales te ofrece las herramientas y el apoyo necesario para superar tus obstáculos y
+                            alcanzar una vida plena y significativa.<br><br>
+                        </p>
 
-					</div>
-					<!-- end section-container -->
-					<!-- begin section-container -->
-					<div class="section-container">
-						<h4 class="section-title m-b-20"><span>Contacto</span></h4>
-						<p class="m-b-30">
-							If you have a project you would like to discuss, get in touch with us.
-							Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet,
-							lectus arcu pulvinar risus, vitae facilisis libero dolor a purus.
-						</p>
-						<!-- begin row -->
-						<div class="row row-space-30">
-							<!-- begin col-8 -->
-							<div class="col-md-8">
-                                <H1>hola</H1>
-							</div>
-							<!-- end col-8 -->
-							<!-- begin col-4 -->
-							<div class="col-md-4">
-								<p>
-									<strong>Viavital S.A. De C.V.</strong><br>
-									795 Folsom Ave, Suite 600<br>
-									San Francisco, CA 94107<br>
-									P: (123) 456-7890<br>
-								</p>
-								<p>
-									<span class="phone">+11 (0) 123 456 78</span><br>
-									<a href="mailto:viavital@gmail.com">viavital@gmail.com</a>
-								</p>
-							</div>
-							<!-- end col-4 -->
-						</div>
-						<!-- end row -->
-					</div>
-					<!-- end section-container -->
-				</div>
-				<!-- end col-9 -->
-				<!-- begin col-3 -->
-				<div class="col-lg-3">
+                        <!-- begin row -->
+                        <div class="row row-space-30">
+                            <!-- begin col-8 -->
+                            <div class="col-md-8">
+                                <p>No permitas que el pasado controlé tu presente y limite tu futuro. Ahora es el momento de
+                            tomar acción y elegir el camino hacia la sanación y el crecimiento personal. Permítenos ser
+                            tu guía en este viaje transcendental hacia una vida llena de felicidad, propósito y
+                                    serenidad.</p>
+                            </div>
+                            <!-- end col-8 -->
+                            <!-- begin col-4 -->
+                            <div class="col-md-4">
+                                <p>
+                                    <strong>Viavital S.A. De C.V.</strong><br>
+                                    Calle Volcan Xinantecatl 914<br>
+                                    Metepec, Edo. Mex<br>
+                                    C.P. 52169<br>
+                                </p>
+                                <p>
+                                    <span class="phone">+52 722 131 4400</span><br>
+                                    <a href="mailto:luzviavital@gmail.com">luzviavital@gmail.com</a>
+                                </p>
+                            </div>
+                            <!-- end col-4 -->
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- end section-container -->
 
-					<!-- begin section-container -->
-					<div class="section-container">
-						<h4 class="section-title"><span>Recientes Posts</span></h4>
-						<ul class="sidebar-recent-post">
+                    <!-- begin section-container -->
+                    <div class="section-container">
+                        <iframe width="100%" height="600"
+                                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Calle%20Volcan%20Xinantecatl%20914%20Metepec,%20Edo.%20Mex%20C.P.%2052169+(Via%20vital)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                            <a href="https://www.gps.ie/car-satnav-gps/">Car Navigation Systems</a></iframe>
+                    </div>
+                    <!-- end section-container -->
+                </div>
+                <!-- end col-9 -->
+                <!-- begin col-3 -->
+                <div class="col-lg-3">
+
+                    <!-- begin section-container -->
+                    <div class="section-container">
+                        <h4 class="section-title"><span>Recientes Posts</span></h4>
+                        <ul class="sidebar-recent-post">
                             {% for recent in recent_posts %}
-							<li>
-								<div class="info">
-									<h4 class="title"><a href="{% url 'posts:detail' recent.pk  %}">🗞️ {{ recent.summary }}</a></h4>
-									<div class="date">{{ recent.created }}</div>
-								</div>
-							</li>
+                                <li>
+                                    <div class="info">
+                                        <h4 class="title"><a
+                                                href="{% url 'posts:detail' recent.pk %}">🗞️ {{ recent.summary }}</a>
+                                        </h4>
+                                        <div class="date">{{ recent.created }}</div>
+                                    </div>
+                                </li>
                             {% endfor %}
-						</ul>
-					</div>
-					<!-- end section-container -->
-					<!-- begin section-container -->
-					<div class="section-container">
-						<h4 class="section-title"><span>Follow Us</span></h4>
-						<ul class="sidebar-social-list">
-							<li><a href="#"><i class="fab fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-						</ul>
-					</div>
-					<!-- end section-container -->
-				</div>
-				<!-- end col-3 -->
-			</div>
-			<!-- end row -->
-		</div>
-		<!-- end container -->
-	</div>
-	<!-- end #content -->
+                        </ul>
+                    </div>
+                    <!-- end section-container -->
+                    <!-- begin section-container -->
+                    <div class="section-container">
+                        <h4 class="section-title"><span>Follow Us</span></h4>
+                        <ul class="sidebar-social-list">
+                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- end section-container -->
+                </div>
+                <!-- end col-3 -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end #content -->
 
 
 {% endblock %}
